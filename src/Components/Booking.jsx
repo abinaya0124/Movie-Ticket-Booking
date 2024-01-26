@@ -116,7 +116,7 @@ const ChoosingSeats = () => {
               {seats.map((seat, id) => (
                 <div
                   key={id}
-                  className={`w-[20px] h-[20px] bg-gray-300 ${
+                  className={`w-[20px] h-[20px]  ${
                     (bookedSeats[selectedMovie.name] &&
                       bookedSeats[selectedMovie.name].includes(id)) ||
                     selectedSeat.includes(id)
@@ -128,7 +128,7 @@ const ChoosingSeats = () => {
                       ? "bg-blue-700"
                       : selectedSeat.includes(id)
                       ? "bg-green-700"
-                      : ""
+                      : "bg-gray-300"
                   }`}
                   onClick={() => {
                     if (
